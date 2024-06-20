@@ -1,0 +1,50 @@
+.navigation {
+    background-color: #fff;
+    &__bar {
+        display: flex;
+        align-items: center;
+        font-size: 25px;
+        line-height: 20px;
+        font-weight: 400;
+        a {
+            text-decoration: none;
+            margin-left: 20px;
+        }
+    }
+    &__select {
+        width: 45px;
+        font-size: 22px;
+        font-weight: 400;
+        color: #000;
+        outline: none;
+        border: none;
+        background: transparent;
+        option:checked { 
+            display:none;
+            font-size: 22px;
+        }
+    }
+    &__wrapper {
+        height: 120px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__logo {
+        padding-top: 10px;
+        img {
+            max-height: 80px;
+        }
+    }
+    &__topic {
+        color: #000000;
+        transition: all .2s ease;
+        &:hover {
+            color: $hover-color;
+        }
+    }
+}
+
+.hamburger {
+    display: none;
+}

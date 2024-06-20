@@ -1,0 +1,113 @@
+.basement {
+    min-height: 700px;
+    background-color: $main-color;
+    padding-bottom: 20px;
+    &__container {
+        padding-top: 70px;
+    }
+    &__logo {
+        text-align: center;
+        img {
+            width: 300px;
+        }
+    }
+    &__wrapper {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 50px;
+    }
+    &__info {
+        width: 350px;
+        border: 2px solid #ffffff73;
+        border-radius: 30px;
+        padding: 10px;
+        color: #fff;
+        font-size: 30px;
+        text-align: center;
+        a {
+            text-decoration: none;
+            color: #fff;
+        }
+        &_mod {
+            &:hover {
+                background-color: $shadow-color;
+            }
+        }
+        &_width {
+            min-width: 350px;
+            &:hover {
+                background-color: $shadow-color;
+            }
+        }
+    }
+    &__button {
+        color: #fff;
+        font-size: 30px;
+        border: none;
+        background: none;
+        cursor: pointer;
+    }
+    &__copied {
+        text-align: center;
+        display: none;
+        user-select: none;
+    }
+    &__number {
+        margin-top: 20px;
+        text-align: center;
+        font-size: 45px;
+        p {
+            padding: 0;
+            color: #fff;
+            font-size: 18px;
+        }
+        a {
+            color: #fff;
+            text-decoration: none;
+        }
+    }
+    &__social {
+        display: flex;
+        justify-content: space-around;
+        margin: 30px auto 0 auto;
+        width: 200px;
+        svg {
+            width: 40px;
+            height: 40px;
+        }
+    }
+    &__media {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 10px;
+        background-color: #bdbdbd6e;
+        padding: 10px ;
+        border-radius: 50px;
+    }
+    &__suptitle {
+        text-align: center;
+        margin-bottom: 5px;
+        font-size: 20px;
+        color: #fff;
+    }
+    &__copyright {
+        text-align: center;
+        margin-top: 50px;
+        a {
+            color: #fff;
+            text-decoration: none;
+        }
+        span {
+            color: #fff;
+        }
+    }
+}
+
+.copied {
+    display: block;
+}
+
+.hideaway {
+    display: none;
+}

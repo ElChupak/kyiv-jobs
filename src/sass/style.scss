@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+@import 'base/variables.scss';
+@import 'base/mixins.scss';
+
+
+* {
+    font-family: 'Oswald', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+.container {
+    width: 1140px;
+    margin: 0 auto;
+}
+.container-2560 {
+    max-width: 2560px;
+    margin: 0 auto;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+@import 'blocks/navigation.scss';
+@import 'blocks/slider.scss';
+@import 'blocks/manage.scss';
+@import 'blocks/clients.scss';
+@import 'blocks/faq.scss';
+@import 'blocks/offers.scss';
+@import 'blocks/contact.scss';
+@import 'blocks/basement.scss';
+@import 'blocks/animation.scss';
+@import 'blocks/media.scss';
+@import 'blocks/policy.scss';
+
+
+
+
+
+

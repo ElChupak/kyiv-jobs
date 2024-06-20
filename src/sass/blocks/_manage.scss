@@ -1,0 +1,49 @@
+.title {
+    margin-top: 75px;
+    text-align: center;
+    &__suptitle {
+        font-size: 60px;
+        font-weight: 700;
+    }
+    &__subtitle {
+        margin: 10px auto 20px auto;
+        max-width: 620px;
+        font-size: 24px;
+        font-weight: 300;
+    }
+
+}
+
+.manage {
+    &__wrapper {
+        margin-top: 40px;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__box {
+        position: relative;
+        width: 370px;
+        height: 370px;
+        transition: .5s;
+        img {
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+        }
+        &:hover {
+            scale: 0.98;
+        }
+    }
+    &__descr {
+        position: absolute;
+        font-size: 50px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #ffffff;
+        background-color: #888c3f;
+        padding: 0 10px 0 10px;
+        border-radius: 5px;
+
+    }
+}
