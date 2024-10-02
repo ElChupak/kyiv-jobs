@@ -1,8 +1,12 @@
 .policy {
     background-color: $main-color;
+    color: #fff;
 }
 .container-policy {
     width: 1140px;
     margin: 0 auto;
     padding: 50px;
+    ul {
+        margin-left: 25px;
+    }
 }

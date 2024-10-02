@@ -1,4 +1,3 @@
-
 const select = document.querySelector('select'),
     allLang = ['en', 'ua', 'nl'];
 
@@ -44,6 +43,9 @@ function changeLanguage() {
 }
 
 changeLanguage();
+
+
+
 
 // // Language Switcher CSS
 

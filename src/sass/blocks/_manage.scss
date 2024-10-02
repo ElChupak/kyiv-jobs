@@ -30,9 +30,6 @@
             height: 100%;
             width: 100%;
         }
-        &:hover {
-            scale: 0.98;
-        }
     }
     &__descr {
         position: absolute;
@@ -41,7 +38,7 @@
         left: 50%;
         transform: translate(-50%, -50%);
         color: #ffffff;
-        background-color: #888c3f;
+        background-color: $main-color;
         padding: 0 10px 0 10px;
         border-radius: 5px;
 

@@ -12,16 +12,38 @@
         }
     }
     &__select {
-        width: 45px;
+        appearance:none;
+        padding: 1px 1px 3px 5px;
+        background: transparent;
+        width: 53px;
         font-size: 22px;
         font-weight: 400;
         color: #000;
         outline: none;
-        border: none;
         background: transparent;
-        option:checked { 
-            display:none;
-            font-size: 22px;
+        border: 2px solid #000;
+        border-radius: 12px;
+        cursor: pointer;
+        option {
+            &:checked { 
+                display:none;
+                font-size: 22px;
+            }
+        }
+    }
+    &__pseudo {
+        position: relative;
+        &:after {
+            content: "";
+            position: absolute;
+            transform: translateX(-50%) translateY(-50%) rotate(45deg);
+            height: 5px;
+            width: 5px;
+            top: 50%;
+            right: 10%;
+            border-right: 2px solid #000;
+            border-bottom: 2px solid #000;
+            pointer-events: none;
         }
     }
     &__wrapper {
@@ -48,3 +70,4 @@
 .hamburger {
     display: none;
 }
+

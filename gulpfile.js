@@ -34,11 +34,14 @@ gulp.task("watch", function () {
 	gulp.watch("src/fonts/**/*").on("all", gulp.parallel("fonts"));
 	gulp.watch("src/icons/**/*").on("all", gulp.parallel("icons"));
 	gulp.watch("src/img/**/*").on("all", gulp.parallel("images"));
+	gulp.watch("src/policies/**/*").on("all", gulp.parallel("policy"));
+	gulp.watch("src/*.php").on("all", gulp.parallel("php"));
+
 });
 
 gulp.task("html", function () {
 	return gulp
-		.src("src/*.html")
+		.src("src/**/*.html")
 		.pipe(htmlmin({ collapseWhitespace: true }))
 		.pipe(gulp.dest("dist/"));
 });
@@ -71,6 +74,19 @@ gulp.task("images", function () {
 		.pipe(browserSync.stream());
 });
 
+gulp.task("policy", function () {
+	return gulp
+		.src("src/policies/**/*")
+		.pipe(gulp.dest("dist/policies"))
+		.pipe(browserSync.stream());
+});
+
+gulp.task("php", function () {
+	return gulp
+		.src("src/*.php")
+		.pipe(htmlmin({ collapseWhitespace: true }))
+		.pipe(gulp.dest("dist/"));
+});
 
 
 
@@ -84,6 +100,8 @@ gulp.task(
 		"fonts",
 		"icons",
 		"html",
-		"images"
+		"images",
+		"policy",
+		"php"
 	)
 );

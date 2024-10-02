@@ -9,7 +9,7 @@ window.addEventListener('DOMContentLoaded', () => {
   });
 
 
-   // Slider main
+  // Slider main
 
   $('.slider__inner').slick(
     {
@@ -42,30 +42,6 @@ window.addEventListener('DOMContentLoaded', () => {
   
   );
   
-  const faqs = document.querySelectorAll('.faq__accordion');
-  
-  faqs.forEach(faq => {
-    const question = faq.querySelector('.faq__question');
-    const answer = faq.querySelector('.faq__answer');
-  
-    question.addEventListener('click', () => {
-      if (faq.classList.contains('open')) {
-        faq.classList.remove('open');
-        answer.style.maxHeight = null;
-      } else {
-        // Закриття активних блоків
-        faqs.forEach(otherBlocks => {
-          if (otherBlocks.classList.contains('open')) {
-            otherBlocks.classList.remove('open');
-            otherBlocks.querySelector('.faq__answer').style.maxHeight = null;
-          }
-        });
-  
-        faq.classList.add('open');
-        answer.style.maxHeight = answer.scrollHeight + 'px';
-      }
-    });
-  });
   
   // Copy Url
   
@@ -161,7 +137,7 @@ window.addEventListener('DOMContentLoaded', () => {
   // Hamburger
 
   const menu = document.querySelector('.navigation__bar'),
-  menuItem = document.querySelectorAll('.navigation__item'),
+  menuItem = document.querySelectorAll('.navigation__link'),
   hamburger = document.querySelector('.hamburger');
 
   hamburger.addEventListener('click', () => {
@@ -188,5 +164,66 @@ window.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+
+  // Mailer
+
+  const form = document.getElementById('form'),
+        area = document.querySelector('.contact__area'),
+        status = document.querySelector('.contact__status');
+
+	form.addEventListener('submit', formSend);
+  
+  function hideStatus() {
+    setTimeout(() => {
+      status.classList.remove('active');
+    }, 4000);
+  }
+
+	async function formSend(e) {
+		e.preventDefault();
+
+		let formData = new FormData(form);
+
+    let error = 0;
+    if (error === 0) {
+			form.classList.add('sending');
+			let response = await fetch('sendmail.php', {
+				method: 'POST',
+				body: formData
+			});
+			if (response.ok) {
+				let result = await response.json();
+				// alert(result.message);
+        status.classList.add('active');
+        form.reset();
+        hideStatus();
+			} else {
+				alert("Oops! Something went wrong...");
+				area.classList.remove('sending');
+			}
+		} else {
+			console.log('error');
+		}
+  }
 });
+
+
+
+// area.classList.add('sending');
+// let response = await fetch('sendmail.php', {
+//   method: 'POST',
+//   body: formData
+// });
+// if (response.ok) {
+//   let result = await response.json();
+//   form.placeholder = '';
+//   alert(result.message);
+//   area.classList.remove('sending');
+// } else {
+//   alert("Ошибка");
+//   area.classList.remove('sending');
+// }
+
+
+
 

@@ -36,7 +36,7 @@
         }
         &_text{
             margin-top: 20px;
-            font-size: 20px;
+            font-size: 22px;
             font-style: italic;
             color: #fff;
             font-weight: 300;
@@ -68,17 +68,13 @@
         font-size: 0;
         background: none;
         border: none;
-        border-left: 3px solid #505050;
-        border-bottom: 3px solid #505050;
+        border-left: 3px solid #fff;
+        border-bottom: 3px solid #fff;
         width: 25px;
         height: 25px;
         transform: rotate(45deg);
         margin-left: 9px;
         cursor: pointer;
-        &:hover {
-            border-left: 3px solid #a2a2a2;
-            border-bottom: 3px solid #a2a2a2;
-            }
     }
     .slick-next {
         position: absolute;
@@ -87,17 +83,13 @@
         font-size: 0;
         border: none;
         background: none;
-        border-right: 3px solid #505050;
-        border-top: 3px solid #505050;
+        border-right: 3px solid #fff;
+        border-top: 3px solid #fff;
         width: 25px;
         height: 25px;
         transform: rotate(45deg);
         margin-right: 9px;
         cursor: pointer;
-        &:hover {
-            border-right: 3px solid #a2a2a2;
-            border-top: 3px solid #a2a2a2;
-            }
     }
 }
 
